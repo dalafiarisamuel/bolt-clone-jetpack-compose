@@ -90,4 +90,52 @@ object Dependencies {
         lifecycleExtension,
         androidxPagingRuntime
     ) + ComposeDependencies.implementations
+
+
+    val cacheImplementation = listOf(
+        kotlinStandardLibrary,
+        ktx,
+        hiltAndroid,
+        roomRuntime,
+        roomKtx,
+        javaxInject,
+        androidxAnnotation,
+        kotlinCoroutineAndroid,
+        kotlinCoroutineCore,
+    )
+
+    val domainImplementation = listOf(
+        kotlinCoroutineCore,
+        kotlinStandardLibrary,
+        retrofit2,
+        moshiKotlin,
+        retrofitMoshiConverter,
+        javaxInject,
+    )
+
+    val dataImplementation = listOf(
+        kotlinCoroutineCore,
+        kotlinStandardLibrary,
+        javaxInject,
+    )
+
+    val coreImplementations = listOf(
+        kotlinStandardLibrary,
+        androidxAnnotation,
+        kotlinCoroutineAndroid,
+        kotlinCoroutineCore,
+        retrofit2,
+        retrofitMoshiConverter,
+        moshiKotlin,
+        roomRuntime,
+        roomKtx,
+        hiltAndroid,
+        javaxInject,
+        hiltWorker,
+        workManager,
+        workManagerSupport,
+        loggingInterceptor,
+        okHttp,
+        retroMock
+    )
 }

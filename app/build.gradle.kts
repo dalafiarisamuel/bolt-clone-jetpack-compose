@@ -8,12 +8,12 @@ plugins {
 }
 
 android {
-    compileSdk = Versions.compilesdk
+    compileSdk = Versions.compileSdk
 
     defaultConfig {
         applicationId = Application.id
-        minSdk = Versions.minsdk
-        targetSdk = Versions.targetsdk
+        minSdk = Versions.minSdk
+        targetSdk = Versions.targetSdk
         versionCode = Application.versionCode
         versionName = Application.versionName
         testInstrumentationRunner = Application.testInstrumentationRunner
@@ -61,7 +61,6 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementAll(Dependencies.implementations)
-    implementAll(SupportDependencies.supportImplementation)
     testImplementAll(TestDependencies.testImplementation)
     testAndroidImplementAll(AndroidTestDependencies.androidTestImplementation)
     kaptImplementAll(AnnotationProcessors.AnnotationProcessorsImplementation)

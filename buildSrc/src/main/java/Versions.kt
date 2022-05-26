@@ -1,13 +1,11 @@
 object Versions {
     const val gradle = "7.1.3"
-    const val compilesdk = 32
-    const val minsdk = 21
-    const val targetsdk = 32
+    const val compileSdk = 32
+    const val minSdk = 21
+    const val targetSdk = 32
     const val kotlin = "1.6.21"
     const val ktx = "1.7.0"
     const val room = "2.2.5"
-    const val appcompat = "1.4.0"
-    const val materialDesign = "1.4.0"
     const val kotlinCoroutineVersion = "1.3.0"
     const val retrofit2 = "2.9.0"
     const val retrofit2ConverterMoshi = "2.9.0"
@@ -39,4 +37,5 @@ object Versions {
     const val okHttp = "4.2.2"
     const val retroMock = "1.1.0"
     const val composeVersion = "1.2.0-beta02"
+    const val androidxTestCore = "1.4.0"
 }

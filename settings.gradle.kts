@@ -5,5 +5,6 @@ pluginManagement {
         mavenCentral()
     }
 }
-include (":app")
 rootProject.name = "Bolt Clone Compose"
+include (":app")
+include(":cache")

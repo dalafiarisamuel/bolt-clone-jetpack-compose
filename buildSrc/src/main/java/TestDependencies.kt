@@ -22,4 +22,19 @@ object TestDependencies {
             androidXcore,
             okHttpMockServer
         )
+
+    val remoteTestImplementation = listOf(
+        junit4,
+        kotlinxCouroutine,
+        googleTruth,
+        mockito,
+        okHttpMockServer
+    )
+
+    val cacheTestImplementation = listOf(
+        junit4,
+        kotlinxCouroutine,
+        googleTruth,
+        mockito,
+    )
 }

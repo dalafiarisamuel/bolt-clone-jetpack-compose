@@ -1,11 +1,12 @@
 object AndroidTestDependencies {
     private const val androidxTestExt = "androidx.test.ext:junit-ktx:${Versions.androidxTestExt}"
+    private const val androidxTestCore = "androidx.test:core:${Versions.androidxTestCore}"
     private const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
     private const val mockitoDexMaker =
         "com.linkedin.dexmaker:dexmaker-mockito:${Versions.mockitoDexMaker}"
     private const val googleTruth = "com.google.truth:truth:${Versions.googleTruth}"
     private const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
-    private const val kotlinxCouroutine =
+    private const val kotlinxCoroutine =
         "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.kotlinCoroutineVersion}"
     private const val androidXcore = "androidx.arch.core:core-testing:${Versions.androidXcore}"
     private const val hiltTesting = "com.google.dagger:hilt-android-testing:${Versions.hiltVersion}"
@@ -22,12 +23,13 @@ object AndroidTestDependencies {
 
     val androidTestImplementation =
         listOf(
+            androidxTestCore,
             androidxTestExt,
             espressoCore,
             mockitoDexMaker,
             googleTruth,
             mockito,
-            kotlinxCouroutine,
+            kotlinxCoroutine,
             androidXcore,
             hiltTesting,
             espressoContrib,
@@ -35,4 +37,28 @@ object AndroidTestDependencies {
             jUnit,
             Compose.composeJunitTest
         )
+
+    val remoteTestImplementation = listOf(
+        androidxTestExt,
+        espressoCore,
+        mockitoDexMaker,
+        googleTruth,
+        mockito,
+        kotlinxCoroutine,
+        hiltTesting,
+        espressoContrib,
+        okHttpMockServer,
+    )
+
+    val cacheTestImplementation = listOf(
+        androidxTestExt,
+        espressoCore,
+        mockitoDexMaker,
+        googleTruth,
+        mockito,
+        kotlinxCoroutine,
+        androidXcore,
+        jUnit,
+        hiltTesting,
+    )
 }

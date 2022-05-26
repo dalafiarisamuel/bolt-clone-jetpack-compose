@@ -4,6 +4,7 @@
     package="ng.devtamuno.bolt.compose">
 
     <application
+        android:name=".BoltCloneApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
