@@ -1,9 +1,8 @@
 plugins {
-    androidApplication
+    androidComLibrary
     androidLibrary
     kaptPlugin
     daggerHilt
-    navigationSafeArgsKotlin
     kotlinParcelize
 }
 
@@ -14,16 +13,6 @@ android {
     defaultConfig {
         minSdk = Versions.minSdk
         targetSdk = Versions.targetSdk
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
     }
 }
 
