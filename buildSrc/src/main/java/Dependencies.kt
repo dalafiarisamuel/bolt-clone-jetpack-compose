@@ -107,7 +107,6 @@ object Dependencies {
     val domainImplementation = listOf(
         kotlinCoroutineCore,
         kotlinStandardLibrary,
-        retrofit2,
         moshiKotlin,
         retrofitMoshiConverter,
         javaxInject,

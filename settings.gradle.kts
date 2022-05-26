@@ -9,3 +9,4 @@ rootProject.name = "Bolt Clone Compose"
 include (":app")
 include(":cache")
 include(":core")
+include(":domain")
