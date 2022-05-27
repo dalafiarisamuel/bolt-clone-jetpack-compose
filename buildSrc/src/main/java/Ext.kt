@@ -35,3 +35,9 @@ fun DependencyHandler.debugImplementationAll(list: List<String>) {
         add("debugImplementation", it)
     }
 }
+
+fun DependencyHandler.addAllClassPath(list: List<String>){
+    list.forEach {
+        add("classpath", it)
+    }
+}
