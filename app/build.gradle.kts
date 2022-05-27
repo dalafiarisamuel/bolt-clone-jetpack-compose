@@ -60,6 +60,8 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(project(BuildModule.DOMAIN))
+    implementation(project(BuildModule.CORE))
     implementAll(Dependencies.implementations)
     testImplementAll(TestDependencies.testImplementation)
     testAndroidImplementAll(AndroidTestDependencies.androidTestImplementation)

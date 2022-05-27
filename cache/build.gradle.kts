@@ -19,6 +19,7 @@ android {
 
 dependencies {
 
+    implementation(project(BuildModule.DATA))
     implementAll(Dependencies.cacheImplementation)
     testImplementAll(TestDependencies.cacheTestImplementation)
     testAndroidImplementAll(AndroidTestDependencies.cacheTestImplementation)

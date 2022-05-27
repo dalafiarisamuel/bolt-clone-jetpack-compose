@@ -18,9 +18,10 @@ android {
 }
 
 dependencies {
-
+    implementation(project(BuildModule.DOMAIN))
+    implementation(project(BuildModule.CACHE))
+    implementation(project(BuildModule.DATA))
     implementAll(Dependencies.coreImplementations)
     kaptImplementAll(AnnotationProcessors.AnnotationProcessorsImplementation)
-    kaptAndroidTestImplementAll(AnnotationProcessors.AnnotationProcessorsImplementation)
 
 }
