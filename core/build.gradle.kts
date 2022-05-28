@@ -14,6 +14,15 @@ android {
         targetSdk = Versions.targetSdk
     }
 
+    compileOptions {
+        targetCompatibility = Java.javaVersion
+        sourceCompatibility = Java.javaVersion
+    }
+
+    kotlinOptions {
+        jvmTarget = Java.javaVersion.toString()
+    }
+
 
 }
 

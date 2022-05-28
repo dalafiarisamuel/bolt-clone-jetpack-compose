@@ -78,7 +78,7 @@ object Dependencies {
         roomKtx,
         hiltAndroid,
         javaxInject,
-        hiltViewModel,
+        /*hiltViewModel,*/
         hiltWorker,
         workManager,
         workManagerSupport,
