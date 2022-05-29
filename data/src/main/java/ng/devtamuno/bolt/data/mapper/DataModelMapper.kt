@@ -6,7 +6,7 @@ abstract class DataModelMapper<E, D> {
 
     abstract fun mapToDataModel(domainModel: D): E
 
-    fun mapFromEntityList(dataModelList: List<E>): List<D> {
+    fun mapFromDataList(dataModelList: List<E>): List<D> {
         val domainModels = mutableListOf<D>()
         dataModelList.forEach {
             domainModels.add(mapFromDataModel(it))
