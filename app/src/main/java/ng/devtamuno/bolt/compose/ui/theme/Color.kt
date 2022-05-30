@@ -2,7 +2,7 @@ package ng.devtamuno.bolt.compose.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple200 = Color(0xFFBB86FC)
-val Purple500 = Color(0xFF6200EE)
-val Purple700 = Color(0xFF3700B3)
-val Teal200 = Color(0xFF03DAC5)
+val BoltGreen = Color(0xFF2EB875)
+val BoltGreenLight = Color(0xFFD9FDE5)
+val BoltBlue = Color(0xFF6675FF)
+val BoltBlueDark = Color(0xFF4F5CD1)

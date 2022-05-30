@@ -1,7 +1,7 @@
 object Versions {
     const val gradle = "7.1.3"
     const val compileSdk = 32
-    const val minSdk = 21
+    const val minSdk = 23
     const val targetSdk = 32
     const val kotlin = "1.6.21"
     const val ktx = "1.7.0"
