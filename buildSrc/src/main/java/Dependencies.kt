@@ -16,8 +16,6 @@ object Dependencies {
     private const val roomKtx = "androidx.room:room-ktx:${Versions.room}"
     private const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
     private const val javaxInject = "javax.inject:javax.inject:${Versions.javaxInject}"
-    private const val hiltViewModel =
-        "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltViewModel}"
     private const val hiltWorker = "androidx.hilt:hilt-work:${Versions.hiltWorker}"
     private const val workManager = "androidx.work:work-runtime-ktx:${Versions.workManager}"
     private const val workManagerSupport = "androidx.work:work-gcm:${Versions.workManager}"
@@ -33,6 +31,7 @@ object Dependencies {
         "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleExtension}"
     private const val androidxPagingRuntime =
         "androidx.paging:paging-runtime:${Versions.androidxPagingRuntime}"
+    private const val splashscreen = "androidx.core:core-splashscreen:1.0.0-beta02"
 
 
     object ComposeDependencies {
@@ -88,7 +87,8 @@ object Dependencies {
         androidLifecycleRuntime,
         lifecycleViewModel,
         lifecycleExtension,
-        androidxPagingRuntime
+        androidxPagingRuntime,
+        splashscreen
     ) + ComposeDependencies.implementations
 
 

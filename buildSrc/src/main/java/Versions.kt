@@ -1,7 +1,7 @@
 object Versions {
     const val gradle = "7.1.3"
     const val compileSdk = 32
-    const val minSdk = 23
+    const val minSdk = 24
     const val targetSdk = 32
     const val kotlin = "1.6.21"
     const val ktx = "1.7.0"
@@ -22,7 +22,6 @@ object Versions {
     const val navigationSafeArgs = "2.4.2"
     const val hiltVersion = "2.41"
     const val javaxInject = "1"
-    const val hiltViewModel = "1.0.0-alpha02"
     const val androidxFragmentKtx = "1.3.2"
     const val hiltWorker = "1.0.0-beta01"
     const val workManager = "2.4.0"

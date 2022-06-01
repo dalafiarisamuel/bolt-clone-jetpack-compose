@@ -3,6 +3,13 @@
 
     <style name="Theme.BoltCompose" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:statusBarColor">@color/bolt_blue</item>
+        <item name="android:statusBarColor">@color/bolt_green</item>
+    </style>
+
+    <style name="Theme.BoltSplashScreenTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/bolt_green</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_bolt_splash_logo</item>
+        <item name="windowSplashScreenAnimationDuration">600</item>
+        <item name="postSplashScreenTheme">@style/Theme.BoltCompose</item>
     </style>
 </resources>
