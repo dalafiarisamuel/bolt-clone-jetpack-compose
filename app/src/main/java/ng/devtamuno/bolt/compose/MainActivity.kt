@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.material.Scaffold
 import androidx.compose.material.rememberScaffoldState
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import ng.devtamuno.bolt.compose.ui.component.NavigationDrawer
+import ng.devtamuno.bolt.compose.ui.component.drawer.NavigationDrawer
 import ng.devtamuno.bolt.compose.ui.theme.BoltComposeTheme
 
 class MainActivity : ComponentActivity() {

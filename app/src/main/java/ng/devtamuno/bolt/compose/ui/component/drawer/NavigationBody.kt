@@ -1,4 +1,4 @@
-package ng.devtamuno.bolt.compose.ui.component
+package ng.devtamuno.bolt.compose.ui.component.drawer
 
 
 import androidx.annotation.DrawableRes
@@ -20,6 +20,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import ng.devtamuno.bolt.compose.R
+import ng.devtamuno.bolt.compose.ui.component.PreviewComposableWithTheme
+import ng.devtamuno.bolt.compose.ui.component.noRippleClickable
 import ng.devtamuno.bolt.compose.ui.theme.CustomColor
 
 @Composable

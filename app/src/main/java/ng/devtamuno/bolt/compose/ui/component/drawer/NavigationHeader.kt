@@ -1,4 +1,4 @@
-package ng.devtamuno.bolt.compose.ui.component
+package ng.devtamuno.bolt.compose.ui.component.drawer
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import ng.devtamuno.bolt.compose.R
+import ng.devtamuno.bolt.compose.ui.component.PreviewComposableWithTheme
 import ng.devtamuno.bolt.compose.ui.theme.CustomColor
 
 @Composable

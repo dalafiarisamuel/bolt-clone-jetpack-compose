@@ -1,4 +1,4 @@
-package ng.devtamuno.bolt.compose.ui.component
+package ng.devtamuno.bolt.compose.ui.component.drawer
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,6 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import ng.devtamuno.bolt.compose.R
+import ng.devtamuno.bolt.compose.ui.component.PreviewComposableWithTheme
 import ng.devtamuno.bolt.compose.ui.theme.CustomColor
 
 
