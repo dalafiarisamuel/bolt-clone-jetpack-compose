@@ -48,6 +48,7 @@ object Dependencies {
         private const val composeViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1"
         private const val coilCompose = "io.coil-kt:coil-compose:1.4.0"
         private const val composeNavigation = "androidx.navigation:navigation-compose:2.4.0"
+        private const val composeConstraintLayout = "androidx.constraintlayout:constraintlayout-compose:1.0.1"
 
         val implementations = listOf(
             composeUi,
@@ -58,7 +59,8 @@ object Dependencies {
             composeActivity,
             composeViewModel,
             coilCompose,
-            composeNavigation
+            composeNavigation,
+            composeConstraintLayout
         )
 
 
