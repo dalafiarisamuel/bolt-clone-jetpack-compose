@@ -27,7 +27,7 @@ android {
 
 dependencies {
 
-    implementation(project(BuildModule.REMOTE))
+    implementation(project(BuildModule.DATA))
     implementAll(Dependencies.remoteImplementation)
     testImplementAll(TestDependencies.remoteTestImplementation)
     testAndroidImplementAll(AndroidTestDependencies.remoteTestImplementation)
