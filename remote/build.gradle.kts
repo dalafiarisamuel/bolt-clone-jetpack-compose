@@ -13,6 +13,7 @@ android {
     defaultConfig {
         minSdk = Versions.minSdk
         targetSdk = Versions.targetSdk
+        testInstrumentationRunner = Application.testInstrumentationRunner
     }
 
     compileOptions {
