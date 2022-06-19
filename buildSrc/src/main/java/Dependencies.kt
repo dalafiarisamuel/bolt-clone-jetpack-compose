@@ -72,26 +72,35 @@ object Dependencies {
         androidxAnnotation,
         kotlinCoroutineAndroid,
         kotlinCoroutineCore,
-        retrofit2,
-        retrofitMoshiConverter,
-        moshiKotlin,
-        roomRuntime,
-        roomKtx,
         hiltAndroid,
         javaxInject,
         /*hiltViewModel,*/
         hiltWorker,
         workManager,
         workManagerSupport,
-        loggingInterceptor,
-        okHttp,
-        retroMock,
         androidLifecycleRuntime,
         lifecycleViewModel,
         lifecycleExtension,
         androidxPagingRuntime,
         splashscreen
     ) + ComposeDependencies.implementations
+
+
+    val remoteImplementation = listOf(
+        kotlinStandardLibrary,
+        ktx,
+        androidxAnnotation,
+        kotlinCoroutineAndroid,
+        kotlinCoroutineCore,
+        retrofit2,
+        retrofitMoshiConverter,
+        moshiKotlin,
+        hiltAndroid,
+        javaxInject,
+        loggingInterceptor,
+        okHttp,
+        retroMock,
+    )
 
 
     val cacheImplementation = listOf(

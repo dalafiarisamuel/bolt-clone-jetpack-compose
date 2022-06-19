@@ -6,6 +6,7 @@ plugins {
     kotlinParcelize
 }
 
+
 android {
     compileSdk = Versions.compileSdk
 
@@ -22,16 +23,14 @@ android {
     kotlinOptions {
         jvmTarget = Java.javaVersion.toString()
     }
-
-
 }
 
 dependencies {
-    implementation(project(BuildModule.DOMAIN))
-    implementation(project(BuildModule.CACHE))
-    implementation(project(BuildModule.DATA))
-    implementation(project(BuildModule.REMOTE))
-    implementAll(Dependencies.coreImplementations)
-    kaptImplementAll(AnnotationProcessors.AnnotationProcessorsImplementation)
 
+    implementation(project(BuildModule.REMOTE))
+    implementAll(Dependencies.remoteImplementation)
+    testImplementAll(TestDependencies.remoteTestImplementation)
+    testAndroidImplementAll(AndroidTestDependencies.remoteTestImplementation)
+    kaptImplementAll(AnnotationProcessors.AnnotationProcessorsImplementation)
+    kaptAndroidTestImplementAll(AnnotationProcessors.AnnotationProcessorsImplementation)
 }
