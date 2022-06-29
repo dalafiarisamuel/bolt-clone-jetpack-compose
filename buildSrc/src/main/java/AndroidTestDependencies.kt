@@ -57,7 +57,6 @@ object AndroidTestDependencies {
         googleTruth,
         mockito,
         kotlinxCoroutine,
-        androidXcore,
         jUnit,
         hiltTesting,
     )

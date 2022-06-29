@@ -37,4 +37,11 @@ object TestDependencies {
         googleTruth,
         mockito,
     )
+
+    val domainTestImplementation = listOf(
+        junit4,
+        kotlinxCouroutine,
+        googleTruth,
+        mockito,
+    )
 }

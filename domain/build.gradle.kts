@@ -19,4 +19,5 @@ kotlin {
 dependencies {
 
     implementAll(Dependencies.domainImplementation)
+    testImplementAll(TestDependencies.domainTestImplementation)
 }
