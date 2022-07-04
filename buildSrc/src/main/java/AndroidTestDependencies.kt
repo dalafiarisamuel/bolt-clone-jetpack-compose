@@ -39,14 +39,12 @@ object AndroidTestDependencies {
         )
 
     val remoteTestImplementation = listOf(
-        androidxTestExt,
-        espressoCore,
         mockitoDexMaker,
         googleTruth,
         mockito,
         kotlinxCoroutine,
         hiltTesting,
-        espressoContrib,
+        jUnit,
         okHttpMockServer,
     )
 
@@ -56,7 +54,6 @@ object AndroidTestDependencies {
         mockitoDexMaker,
         googleTruth,
         mockito,
-        kotlinxCoroutine,
         jUnit,
         hiltTesting,
     )

@@ -35,4 +35,8 @@ dependencies {
     testAndroidImplementAll(AndroidTestDependencies.cacheTestImplementation)
     kaptImplementAll(AnnotationProcessors.AnnotationProcessorsImplementation)
     kaptAndroidTestImplementAll(AnnotationProcessors.AnnotationProcessorsImplementation)
+
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.0") {
+        exclude(group = "org.jetbrains.kotlinx", module = "kotlinx-coroutines-debug")
+    }
 }

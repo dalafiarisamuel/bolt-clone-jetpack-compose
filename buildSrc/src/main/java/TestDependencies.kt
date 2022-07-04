@@ -5,6 +5,8 @@ object TestDependencies {
     private const val roboElectric = "org.robolectric:robolectric:${Versions.roboElectric}"
     private const val kotlinxCouroutine =
         "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.kotlinCoroutineVersion}"
+    private const val kotlinxCouroutineDebug =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-debug:${Versions.kotlinCoroutineVersion}"
     private const val googleTruth = "com.google.truth:truth:${Versions.googleTruth}"
     private const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
     private const val androidXcore = "androidx.arch.core:core-testing:${Versions.androidXcore}"
@@ -33,7 +35,7 @@ object TestDependencies {
 
     val cacheTestImplementation = listOf(
         junit4,
-        kotlinxCouroutine,
+        kotlinxCouroutineDebug,
         googleTruth,
         mockito,
     )
