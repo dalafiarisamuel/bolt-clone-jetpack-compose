@@ -6,7 +6,7 @@ object Versions {
     const val kotlin = "1.6.21"
     const val ktx = "1.7.0"
     const val room = "2.4.2"
-    const val kotlinCoroutineVersion = "1.4.0"
+    const val kotlinCoroutineVersion = "1.6.3"
     const val retrofit2 = "2.9.0"
     const val retrofit2ConverterMoshi = "2.9.0"
     const val moshiKotlin = "1.12.0"
