@@ -3,6 +3,7 @@ package ng.devtamuno.bolt.domain.usecase.user
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.TestCoroutineDispatcher
+import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import ng.devtamuno.bolt.domain.executor.CoroutinePostDispatchers
 import ng.devtamuno.bolt.domain.model.UserDomainModel
 import ng.devtamuno.bolt.domain.repository.UserRepository
@@ -28,11 +29,11 @@ abstract class BaseUserUseCaseTest {
         userRepository = mock(UserRepository::class.java)
         coroutineDispatcher = object : CoroutinePostDispatchers {
             override val main: CoroutineDispatcher
-                get() = TestCoroutineDispatcher()
+                get() = UnconfinedTestDispatcher()
             override val io: CoroutineDispatcher
-                get() = TestCoroutineDispatcher()
+                get() = UnconfinedTestDispatcher()
             override val default: CoroutineDispatcher
-                get() = TestCoroutineDispatcher()
+                get() = UnconfinedTestDispatcher()
 
         }
 
