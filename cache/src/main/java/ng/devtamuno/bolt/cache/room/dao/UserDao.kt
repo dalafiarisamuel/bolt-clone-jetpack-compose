@@ -14,8 +14,11 @@ interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveUser(user: UserCacheModel)
 
-    @Query("SELECT * FROM `user` LIMIT 1")
+    @Query("SELECT * FROM `user` ORDER BY `id` DESC LIMIT 1")
     fun getUser(): Flow<List<UserCacheModel>>
+
+    @Query("SELECT * FROM `user` ORDER BY `id`")
+    fun getAllUsers(): Flow<List<UserCacheModel>>
 
     @Query("DELETE FROM `user`")
     suspend fun cleanTable()
