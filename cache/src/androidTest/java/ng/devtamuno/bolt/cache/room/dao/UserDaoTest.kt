@@ -80,7 +80,7 @@ class UserDaoTest : BaseDaoTest() {
     fun saveMultipleUsersWithSamePhoneNumberAndEmailAddress_databaseShouldReturnSingleUpdatedUser() =
         executeTest {
 
-            val user1 = TestUtil.createUser(id = 1)
+            val user1 = TestUtil.createUser()
             val user2 = TestUtil.createUser(
                 id = 2,
                 firstName = "Alice",
@@ -98,6 +98,41 @@ class UserDaoTest : BaseDaoTest() {
             }
 
         }
+
+    @Test
+    fun deleteSavedUsers_databaseShouldReturnEmptyList() = executeTest {
+
+        val user1 = TestUtil.createUser()
+        val user2 = TestUtil.createUser(
+            firstName = "Alice",
+            lastName = "Wonderland",
+            email = "alice@wonderland.com",
+            phoneNumber = "+233345635"
+        )
+        val user3 = TestUtil.createUser(
+            firstName = "Arthur",
+            lastName = "Spiderwick",
+            email = "arthur@spiderwick.com",
+            phoneNumber = "+23334563523"
+        )
+
+        userDao.saveUser(user1)
+        userDao.saveUser(user2)
+        userDao.saveUser(user3)
+
+        userDao.getAllUsers().first().apply {
+            assertThat(this).isNotEmpty()
+            assertThat(this).hasSize(3)
+        }
+
+        userDao.cleanTable()
+
+        userDao.getAllUsers().first().apply {
+            assertThat(this).isEmpty()
+        }
+
+
+    }
 
 
     @After
