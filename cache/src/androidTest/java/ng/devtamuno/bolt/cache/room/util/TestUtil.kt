@@ -3,6 +3,7 @@ package ng.devtamuno.bolt.cache.room.util
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import ng.devtamuno.bolt.cache.room.model.RecentLocationCacheModel
+import ng.devtamuno.bolt.cache.room.model.TripHistoryCacheModel
 import ng.devtamuno.bolt.cache.room.model.UserCacheModel
 
 object TestUtil {
@@ -40,6 +41,24 @@ object TestUtil {
             email,
             phoneNumber,
             isEmailVerified
+        )
+    }
+
+    fun createTripHistory(
+        id: Long? = null,
+        address: String = "12, Ajibola street",
+        amount: Double = 1_500.00,
+        driverName: String = "John Cena",
+        tripStatus: String = "CANCELLED",
+        createdAt: String = "12-30-2022"
+    ): TripHistoryCacheModel {
+        return TripHistoryCacheModel(
+            id,
+            address,
+            amount,
+            driverName,
+            tripStatus,
+            createdAt
         )
     }
 
