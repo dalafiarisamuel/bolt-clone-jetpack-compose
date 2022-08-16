@@ -5,9 +5,9 @@ import androidx.test.filters.MediumTest
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.test.runTest
 import ng.devtamuno.bolt.cache.room.util.TestCoroutineRule
 import ng.devtamuno.bolt.cache.room.util.TestUtil
-import ng.devtamuno.bolt.cache.room.util.TestUtil.executeTest
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -32,7 +32,7 @@ class UserDaoTest : BaseDaoTest() {
 
 
     @Test
-    fun saveSingleUser_dataBaseShouldReturnSingleUser() = executeTest {
+    fun saveSingleUser_dataBaseShouldReturnSingleUser() = runTest {
         val user = TestUtil.createUser(id = 1)
         userDao.saveUser(user)
 
@@ -45,7 +45,7 @@ class UserDaoTest : BaseDaoTest() {
     }
 
     @Test
-    fun saveMultipleUsers_databaseShouldReturnLastInsertedUser() = executeTest {
+    fun saveMultipleUsers_databaseShouldReturnLastInsertedUser() = runTest {
 
         val user1 = TestUtil.createUser(id = 1)
         val user2 = TestUtil.createUser(
@@ -78,7 +78,7 @@ class UserDaoTest : BaseDaoTest() {
 
     @Test
     fun saveMultipleUsersWithSamePhoneNumberAndEmailAddress_databaseShouldReturnSingleUpdatedUser() =
-        executeTest {
+        runTest {
 
             val user1 = TestUtil.createUser()
             val user2 = TestUtil.createUser(
@@ -100,7 +100,7 @@ class UserDaoTest : BaseDaoTest() {
         }
 
     @Test
-    fun deleteSavedUsers_databaseShouldReturnEmptyList() = executeTest {
+    fun deleteSavedUsers_databaseShouldReturnEmptyList() = runTest {
 
         val user1 = TestUtil.createUser()
         val user2 = TestUtil.createUser(

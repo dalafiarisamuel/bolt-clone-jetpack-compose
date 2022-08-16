@@ -1,8 +1,5 @@
 package ng.devtamuno.bolt.cache.room.util
 
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.test.TestScope
-import kotlinx.coroutines.test.runTest
 import ng.devtamuno.bolt.cache.room.model.RecentLocationCacheModel
 import ng.devtamuno.bolt.cache.room.model.TripHistoryCacheModel
 import ng.devtamuno.bolt.cache.room.model.UserCacheModel
@@ -61,15 +58,5 @@ object TestUtil {
             tripStatus,
             createdAt
         )
-    }
-
-
-    @ExperimentalCoroutinesApi
-    fun executeTest(
-        block: suspend TestScope.() -> Unit
-    ) {
-        runTest {
-            block()
-        }
     }
 }
