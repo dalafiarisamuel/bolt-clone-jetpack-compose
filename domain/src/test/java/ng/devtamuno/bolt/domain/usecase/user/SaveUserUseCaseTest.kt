@@ -7,8 +7,6 @@ import io.mockk.runs
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import ng.devtamuno.bolt.domain.usecase.user.TestUtil.createUser
-import ng.devtamuno.bolt.domain.usecase.user.TestUtil.everySuspended
-import ng.devtamuno.bolt.domain.usecase.user.TestUtil.verifySuspended
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
