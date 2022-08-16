@@ -28,7 +28,7 @@ object Versions {
     const val hamcrest = "1.3"
     const val roboElectric = "4.7"
     const val googleTruth = "1.1.2"
-    const val mockito = "2.22.0"
+    const val mockK = "1.12.5"
     const val mockitoDexMaker = "2.28.1"
     const val androidXcore = "2.1.0"
     const val loggingInterceptor = "3.8.0"

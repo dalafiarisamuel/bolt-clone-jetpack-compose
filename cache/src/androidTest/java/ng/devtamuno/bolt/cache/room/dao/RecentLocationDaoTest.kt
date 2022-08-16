@@ -6,9 +6,9 @@ import androidx.test.filters.MediumTest
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.test.runTest
 import ng.devtamuno.bolt.cache.room.util.TestCoroutineRule
 import ng.devtamuno.bolt.cache.room.util.TestUtil
-import ng.devtamuno.bolt.cache.room.util.TestUtil.executeTest
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -37,7 +37,7 @@ class RecentLocationDaoTest : BaseDaoTest() {
 
 
     @Test
-    fun saveSingleRecentLocationAndReadList() = executeTest {
+    fun saveSingleRecentLocationAndReadList() = runTest {
 
         val data = TestUtil.createRecentLocation(id = 1)
 
@@ -51,7 +51,7 @@ class RecentLocationDaoTest : BaseDaoTest() {
 
 
     @Test
-    fun saveListOfRecentLocationAndReadList() = executeTest {
+    fun saveListOfRecentLocationAndReadList() = runTest {
 
         val dataList = listOf(
             TestUtil.createRecentLocation(id = 1),
@@ -72,7 +72,7 @@ class RecentLocationDaoTest : BaseDaoTest() {
     }
 
     @Test
-    fun saveDuplicateDataExpectedToReplaceOldData() = executeTest {
+    fun saveDuplicateDataExpectedToReplaceOldData() = runTest {
 
         val data1 = TestUtil.createRecentLocation(id = 1)
         val data2 = TestUtil.createRecentLocation(id = 1, isWorkAddress = true)
@@ -90,7 +90,7 @@ class RecentLocationDaoTest : BaseDaoTest() {
 
 
     @Test
-    fun deleteWrittenDataToClearTable() = executeTest {
+    fun deleteWrittenDataToClearTable() = runTest {
 
         dao.saveRecentLocation(TestUtil.createRecentLocation())
 

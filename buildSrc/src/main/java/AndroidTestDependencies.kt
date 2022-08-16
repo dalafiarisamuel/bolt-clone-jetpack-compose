@@ -2,10 +2,8 @@ object AndroidTestDependencies {
     private const val androidxTestExt = "androidx.test.ext:junit-ktx:${Versions.androidxTestExt}"
     private const val androidxTestCore = "androidx.test:core:${Versions.androidxTestCore}"
     private const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
-    private const val mockitoDexMaker =
-        "com.linkedin.dexmaker:dexmaker-mockito:${Versions.mockitoDexMaker}"
     private const val googleTruth = "com.google.truth:truth:${Versions.googleTruth}"
-    private const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
+    private const val mockK = "io.mockk:mockk-android:${Versions.mockK}"
     private const val kotlinxCoroutine =
         "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.kotlinCoroutineVersion}"
     private const val androidXcore = "androidx.arch.core:core-testing:${Versions.androidXcore}"
@@ -26,9 +24,8 @@ object AndroidTestDependencies {
             androidxTestCore,
             androidxTestExt,
             espressoCore,
-            mockitoDexMaker,
             googleTruth,
-            mockito,
+            mockK,
             kotlinxCoroutine,
             androidXcore,
             hiltTesting,
@@ -39,9 +36,8 @@ object AndroidTestDependencies {
         )
 
     val remoteTestImplementation = listOf(
-        mockitoDexMaker,
         googleTruth,
-        mockito,
+        mockK,
         kotlinxCoroutine,
         hiltTesting,
         jUnit,
@@ -51,9 +47,8 @@ object AndroidTestDependencies {
     val cacheTestImplementation = listOf(
         androidxTestExt,
         espressoCore,
-        mockitoDexMaker,
         googleTruth,
-        mockito,
+        mockK,
         jUnit,
         hiltTesting,
     )

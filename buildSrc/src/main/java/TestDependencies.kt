@@ -8,7 +8,8 @@ object TestDependencies {
     private const val kotlinxCouroutineDebug =
         "org.jetbrains.kotlinx:kotlinx-coroutines-debug:${Versions.kotlinCoroutineVersion}"
     private const val googleTruth = "com.google.truth:truth:${Versions.googleTruth}"
-    private const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
+    private const val mockK = "io.mockk:mockk:${Versions.mockK}"
+    private const val mockKJvm = "io.mockk:mockk-agent-jvm:${Versions.mockK}"
     private const val androidXcore = "androidx.arch.core:core-testing:${Versions.androidXcore}"
     private const val okHttpMockServer =
         "com.squareup.okhttp3:mockwebserver:${Versions.okHttpMockServer}"
@@ -20,16 +21,18 @@ object TestDependencies {
             roboElectric,
             kotlinxCouroutine,
             googleTruth,
-            mockito,
+            mockK,
+            mockKJvm,
             androidXcore,
-            okHttpMockServer
+            okHttpMockServer,
         )
 
     val remoteTestImplementation = listOf(
         junit4,
         kotlinxCouroutine,
         googleTruth,
-        mockito,
+        mockK,
+        mockKJvm,
         okHttpMockServer
     )
 
@@ -37,13 +40,15 @@ object TestDependencies {
         junit4,
         kotlinxCouroutineDebug,
         googleTruth,
-        mockito,
+        mockKJvm,
+        mockK,
     )
 
     val domainTestImplementation = listOf(
         junit4,
         kotlinxCouroutine,
         googleTruth,
-        mockito,
+        mockK,
+        mockKJvm,
     )
 }

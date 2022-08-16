@@ -5,9 +5,9 @@ import androidx.test.filters.MediumTest
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.test.runTest
 import ng.devtamuno.bolt.cache.room.util.TestCoroutineRule
 import ng.devtamuno.bolt.cache.room.util.TestUtil
-import ng.devtamuno.bolt.cache.room.util.TestUtil.executeTest
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -34,7 +34,7 @@ class TripHistoryDaoTest : BaseDaoTest() {
 
 
     @Test
-    fun saveSingleTripHistory_databaseReturnsListWithSingleItem() = executeTest {
+    fun saveSingleTripHistory_databaseReturnsListWithSingleItem() = runTest {
 
         val data = TestUtil.createTripHistory(id = 1)
         dao.saveTripHistory(data)
@@ -48,7 +48,7 @@ class TripHistoryDaoTest : BaseDaoTest() {
 
 
     @Test
-    fun saveMultipleTripHistory_databaseReturnsListOfItems() = executeTest {
+    fun saveMultipleTripHistory_databaseReturnsListOfItems() = runTest {
 
         val data1 = TestUtil.createTripHistory(id = 1)
         val data2 = TestUtil.createTripHistory(id = 2)
@@ -65,7 +65,7 @@ class TripHistoryDaoTest : BaseDaoTest() {
 
 
     @Test
-    fun deleteTripHistory_databaseReturnsAnEmptyList() = executeTest {
+    fun deleteTripHistory_databaseReturnsAnEmptyList() = runTest {
 
         val data1 = TestUtil.createTripHistory(id = 1)
         val data2 = TestUtil.createTripHistory(id = 2)
