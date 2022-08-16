@@ -1,5 +1,7 @@
 package ng.devtamuno.bolt.domain.usecase.user
 
+import io.mockk.coEvery
+import io.mockk.coVerify
 import io.mockk.just
 import io.mockk.runs
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -32,19 +34,19 @@ class SaveUserUseCaseTest : BaseUserUseCaseTest() {
     @Test
     fun `test saveUserUseCase for user repository to be called at least once`(): Unit = runTest {
 
-        everySuspended {
+        coEvery {
             saveUserUseCase.invoke(param)
         } just runs
 
 
-        everySuspended {
+        coEvery {
             userRepository.saveUserCache(param.user)
         } just runs
 
         saveUserUseCase(param)
 
 
-        verifySuspended(atLeast = 1) {
+        coVerify {
             userRepository.saveUserCache(param.user)
         }
 
